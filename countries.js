@@ -6,18 +6,37 @@ function loadCountry(){
 loadCountry();
 
 function displaycountry(countries){
-    //console.log(countries);
+   
     const countriesDiv = document.getElementById('countries');
+   
     
 
   for(const country of countries){
      
-
+   const div = document.createElement('div');
+   
+    div.classList.add('country');
     
-    const li = document.createElement('li');
-  li.innerText =`Country Name : ${country.name.official}   Capital: ${country.capital}`;
-    countriesDiv.appendChild(li);
-  
-};
+    
+        
+        const h3 = document.createElement('h3');
+    
+    h3.innerText =`Country Name : ${country.name.official}`;
+        div.appendChild(h3);
 
+        const p = document.createElement('p');
+        p.innerText= `Capital: ${country.capital}`;
+        div.appendChild(p);
+        countriesDiv.appendChild(div);
+        
+
+        // const button = document.createElement('button');
+        // // button.addEventListener= onclick();
+        // button.innerHTML  = `details`;
+        // div.appendChild(button);
+        // countriesDiv.appendChild(div);
+       
+    
+
+    }
 }
