@@ -72,7 +72,7 @@ function DisplayCountryDetail(country){
   countrydiv.innerHTML= `
     <h4>${country.name.official}</h4>
     <p>${country.capital}</p>
-    <img src ="${country.flags}">
+    <img src ="${country.flags.png}">
   
                   `
 }
